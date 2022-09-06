@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+src/hotweb.egg-info/PKG-INFO
+src/hotweb.egg-info/SOURCES.txt
+src/hotweb.egg-info/dependency_links.txt
+src/hotweb.egg-info/requires.txt
+src/hotweb.egg-info/top_level.txt
+src/temp/__init__.py

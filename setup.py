@@ -10,4 +10,7 @@ setup(
     packages=find_packages('src'),
     package_dir = {'':'src'},
     keywords = "hotweb python-web-framework python web framework fast light secure",
+    install_requires = [
+        "parse","waitress","webob","requests",
+    ]
 )
