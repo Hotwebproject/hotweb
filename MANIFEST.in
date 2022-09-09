@@ -1,0 +1,3 @@
+include hotweb/temp/*.html
+include hotweb/temp/*.txt
+include hotweb/uix/*.html
