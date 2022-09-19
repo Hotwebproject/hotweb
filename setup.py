@@ -18,7 +18,7 @@ def readme():
         return info
 setup(
     name="hotweb",
-    version="0.7.16",
+    version="0.7.18",
     license="MIT",
     author = "Real Manlow,aka ManlowCharumbira",
     long_description=desc,
@@ -29,6 +29,6 @@ setup(
     include_package_data = True,
     keywords = "hotweb python-web-framework python web framework fast light secure",
     install_requires = [
-        "parse","waitress","webob","requests",
+        "parse","waitress","webob","requests","hotweb-cli","whitenoise","Werkzeug","Jinja2","hotweb-cli"
     ]
 )

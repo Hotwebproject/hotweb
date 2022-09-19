@@ -1,0 +1,10 @@
+      generate_js_file(self,js){
+        start = """
+        $(document).ready(function(){
+        """
+        end = "\n \t" + "})"
+        if len(js)>0{
+            end = js + "\n" + end
+        content = start + end
+        return content
+}

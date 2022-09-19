@@ -1,3 +1,5 @@
 include hotweb/temp/*.html
 include hotweb/temp/*.txt
 include hotweb/uix/*.html
+include hotweb/dom/*.js
+include hotweb/dom/*.json

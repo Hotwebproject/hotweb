@@ -1,16 +1,10 @@
-from .engine.views.all import SiteWrapper
-from .engine.routing.Route import Router
-from .engine.routing.index import app
-from .engine.routing.waitress_server import run_server
-from webob import Response
-resp = Response()
-
-st = SiteWrapper()
-ec = st.web_document
-route = Router()
-def view(req,res):
-    res.text = "hello world test"
-#route.route("/test",st.web_document)
-route.route("/test",view)
-#app = API()
-run_server(app)
+from dom.dom_ import Dom
+import inspect
+d = Dom()
+clk = str(inspect.getsource(d.generate_js_file))
+clk = clk.replace(":","{")
+clk = clk.replace("def","function")
+clk = clk + "}"
+with open("test.txt","w") as f:
+    f.write(clk)
+print(clk)

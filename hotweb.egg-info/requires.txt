@@ -2,3 +2,8 @@ parse
 waitress
 webob
 requests
+hotweb-cli
+whitenoise
+Werkzeug
+Jinja2
+hotweb-cli
