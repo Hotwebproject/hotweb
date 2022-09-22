@@ -6,8 +6,8 @@ import os
 app = Router()
 def hel(req):
     img = os.path.join(os.getcwd(),"router","section.png")
-    print("=====App Mounted=======")
+    
     print(os.getcwd())
-    return "<h1>Hello There</h1>" + "<br>" + f"<img src='/router/section.png' alt='hello' />"
+    return "<h1>Hello There</h1>" + "<br>" + f"<img src='/assets/section.PNG' alt='hello' />"
 app.route("/",hel)
 render(app)

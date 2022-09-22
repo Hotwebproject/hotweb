@@ -9,6 +9,7 @@ is to allow developers to develope websites in one language, that is python beca
 Real Manlow (aka ManlowCharumbira)
 ```
 ## Contacts
+instagram.com/realmanlow
 realmanlow20@gmail.com
 charumbiramanlow20@gmail.com
 """
@@ -18,7 +19,7 @@ def readme():
         return info
 setup(
     name="hotweb",
-    version="0.7.18",
+    version="0.7.181",
     license="MIT",
     author = "Real Manlow,aka ManlowCharumbira",
     long_description=desc,
