@@ -1,5 +1,5 @@
 from waitress import serve
-from .api.api import API
+from .api_ import API
 from whitenoise import WhiteNoise
 import os
 def render(app_routes,host="127.0.0.1",port=8001,url_prefix=""):
@@ -23,8 +23,8 @@ def render(app_routes,host="127.0.0.1",port=8001,url_prefix=""):
     """
     #print(f"======APP Routes :: {app.routes}")
     try:
-        print("<--------------------Hotweb : Powered by ManlowCharumbira---------------------->")
         serve(app_,host=host,port=port,url_prefix=url_prefix)
+        print("<--------------------Hotweb : Powered by ManlowCharumbira---------------------->")
         print(f"                    APP RUNNING ON --> {host}:{port}")
         print("<--------------------HAPPY BLOGGING-------------------------------------------->")
     except Exception as e:

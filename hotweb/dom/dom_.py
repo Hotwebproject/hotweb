@@ -1,5 +1,5 @@
 class Dom:
-
+    js_template = ""
     def __init__(self):
         pass
     

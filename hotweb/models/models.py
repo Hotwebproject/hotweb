@@ -26,6 +26,11 @@ class Models:
     def _validate_input_type(self,arg):
         pass
     # args is a dict of model fields
+    """
+    The create function handles insertion of data into the database
+    It unpacks col values from the supplied args and validate the input to check if any
+    required field is required or missing
+    """
     def create(self,args,many={}):
         # many will handle executemany()
         db = self.db
@@ -118,8 +123,9 @@ class DBConnection:
     -->install the driver for the selected dialect except for sqlite which is built in
     """
     
-    def __init__(self,dialect,**kwargs):
+    def __init__(self,dialect,db_config={},**kwargs):
         self.dialect = dialect
+        self.db_config = db_config
         self.kwargs = kwargs
     def _unpack_kwargs(self):
         pass
@@ -140,9 +146,9 @@ class DBConnection:
     
     def mysql_db(self):
         import mysql.connector as mysql_
-        args={}
+        args= self.db_config
         db = mysql_.connect(
-            host=args["localhost"],
+            host=args["host"],
             user=args["username"],
             password=args["password"],
             database=args["database"]
@@ -197,8 +203,8 @@ def unpack_table(args,t_name="users"):
     end_table = ")"
     line = ""
     for col,attr in args.items():
-        """for key in args[col].keys():
-            line = line+ " "+ " "+ key + args[col][key] + """
+        """ """for key in args[col].keys():
+            line = line+ " "+ " "+ key + args[col][key] + """ """
         line = line+ col_func(args,col,attr)+", \n"
         print(col,attr)
         #table_ += col_func(col[attr],attr)

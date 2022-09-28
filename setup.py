@@ -19,7 +19,7 @@ def readme():
         return info
 setup(
     name="hotweb",
-    version="0.7.181",
+    version="0.7.189",
     license="MIT",
     author = "Real Manlow,aka ManlowCharumbira",
     long_description=desc,

@@ -33,13 +33,14 @@ class API:
             print("====ec=xecutng value")
             res.text = value
         elif handler_==False:
+            # to add 404 page here
             res.text = "File not foundr"
         return res
     def find_handler(self,req_path):
         while len(self.routes.keys()) >0:
             for path,handler in self.routes.items():
                 if path == req_path:
-                    return [handler,True]
+                    return [handler[path],True]
             break
         return ["",False]
 

@@ -6,7 +6,20 @@ collect data types of different dialects and paste here
 """
 
 DataTypes = {
-    "STRING":"STRING",
-    "REAL":"REAL",
-    "INT":"INT",
+    "mysql":{
+        "STRING":"VARCHAR",
+        "FLOAT":"FLOAT",
+        "BIGINT":"BIGINT",
+        "DATE":"DATE",
+        "INTEGER":"INT"
+    },# handle datatypes for mysql
+    "pg":{
+
+    },# for postgres
+    "sqlite":{
+        "STRING":"TEXT",
+        "FLOAT":"REAL",
+        "INTEGER":"INT",
+        "BLOB":"BLOB"
+    }# for sqlite
 }
